@@ -1,1 +1,1 @@
-# igor-stakeholder-onboarding
+# Igor — Stakeholder Onboarding

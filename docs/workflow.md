@@ -1,0 +1,1 @@
+ опиши статуси Backlog → Todo → In Progress → Done, branch → commits → PR → review → merge, шаблон щоденного звіту та шаблон блокера.
