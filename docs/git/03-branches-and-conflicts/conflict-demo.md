@@ -1,3 +1,3 @@
 ## File
 
-Status: ready for mentor review
+Status: teammate review та readiness for mentor review
