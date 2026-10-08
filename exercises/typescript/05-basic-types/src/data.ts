@@ -1,18 +1,18 @@
-import * from './types';
+import * as typs from './types';
 
-const teamMembers: TeamMember[] = [
+export const teamMembers: typs.TeamMember[] = [
 {
 	id: 0,
 	name: "Jhon",
 	role: 'frontend',
-	skills: ["write frontend", "read code"]
+	skills: ["write frontend", "read code"],
 	availability: 'busy'
 },
 {
 	id: 1,
 	name: "Mario",
 	role: 'backend',
-	skills: ["write backend", "read code"]
+	skills: ["write backend", "read code"],
 	availability: 'busy',
 	avatarUrl: "google.com/1"
 },
@@ -20,7 +20,7 @@ const teamMembers: TeamMember[] = [
 	id: 2,
 	name: "Frenk",
 	role: 'fullstack',
-	skills: ["write backend", "write frontend", "read code"]
+	skills: ["write backend", "write frontend", "read code"],
 	availability: 'busy',
 	avatarUrl: "google.com/2"
 },
@@ -28,7 +28,7 @@ const teamMembers: TeamMember[] = [
 	id: 3,
 	name: "Tom",
 	role: 'frontend',
-	skills: ["write frontend", "read code"]
+	skills: ["write frontend", "read code"],
 	availability: 'available',
 	avatarUrl: "google.com/3"
 },
@@ -36,8 +36,7 @@ const teamMembers: TeamMember[] = [
 	id: 4,
 	name: "Mike",
 	role: 'backend',
-	skills: ["write frontend", "read code"]
-	availability: 'available',
-	avatarUrl: "google.com/4"
+	skills: ["write frontend", "read code"],
+	availability: 'available'
 }
 ];
