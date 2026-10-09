@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+.fs-14 {
+  font-size: 14pt;
+}
+
+.sidebar {
+  float: right;
+  padding: 1%;
+  padding-top: 3%;;
+}
+
+.summary-card {
+  padding: 1%;
+  padding-top: 13%;
+}
+.summary-card-item {
+  padding: 2px;
+}
+
+.header {
+  width: 100%;
+}
+
+.header-block {
+  width: 100%;
+}
+
+.header-title {
+  width: 100%;
+}
+.header-sign {
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  color: lawngreen;
+}
+
+.dashboard-page-content h2{
+  width: 100%;
+  padding-left: 14.5%;
+}
+
+.activity-block-title {
+  padding-top: 2%;
+  padding-right: 12%;
+}
+.activity-block {
+  padding-bottom: 10%;
+}
+
+.summary-card-item {
+  padding-left: 10px;
+}
