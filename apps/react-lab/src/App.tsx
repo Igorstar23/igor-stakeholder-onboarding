@@ -1,10 +1,12 @@
 import './App.css'
-import DashboardPage from './modules/06-jsx-components/DashboardPage'
+import TeamPage from './modules/07-props-composition/TeamPage'
+
 
 function App() {
   return (
     <div>
-      <DashboardPage />
+      
+      <TeamPage/>
     </div>
   )
 }

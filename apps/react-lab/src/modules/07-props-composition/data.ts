@@ -3,7 +3,7 @@ import * as typs from './types';
 export const teamMembers: typs.TeamMember[] = [
     {
         id: 1,
-        name: "Jhon",
+        name: "Jhon Smith",
         role: 'frontend',
         bio: "Builds accessible and responsive user interfaces",
         skills: ["write frontend", "read code"],
@@ -12,7 +12,7 @@ export const teamMembers: typs.TeamMember[] = [
     },
     {
         id: 2,
-        name: "Mario",
+        name: "Mario Alexandro",
         role: 'backend',
         bio: "Designs APIs and reliable backend services",
         skills: ["write backend", "read code", "setting BD"],
@@ -21,7 +21,7 @@ export const teamMembers: typs.TeamMember[] = [
     },
     {
         id: 3,
-        name: "Frenk",
+        name: "Frenk Mozart",
         role: 'fullstack',
         bio: "Works across frontend, backend, and deployment",
         skills: ["write backend", "write frontend", "read code", "deployment", "setting BD"],
@@ -30,7 +30,7 @@ export const teamMembers: typs.TeamMember[] = [
     },
     {
         id: 4,
-        name: "Tom",
+        name: "Tom Holland",
         role: 'frontend',
         bio: "Builds responsive user interfaces",
         skills: ["write frontend", "read code"],
