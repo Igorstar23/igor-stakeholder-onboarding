@@ -1,12 +1,12 @@
 import './App.css'
-import TeamPage from './modules/07-props-composition/TeamPage'
+import StakeholderPage from './modules/08-lists-rendering/StakeholderPage'
 
 
 function App() {
   return (
     <div>
       
-      <TeamPage/>
+      <StakeholderPage/>
     </div>
   )
 }

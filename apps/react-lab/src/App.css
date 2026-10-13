@@ -91,3 +91,24 @@
   border: 1px solid blue;
   font-weight: bold;
 }
+
+.stakeholderpage-buttons button{
+  border: 1px solid red;
+  padding: 5px;
+  margin: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 17pt;
+  font-weight: bold;
+  color: red;
+  width: 250px;
+}
+
+.stakeholderList-empty h2 {
+  color: red;
+}
+
+.stakeholderList ul {
+  text-align: left;
+  padding-left: 40%;
+}
