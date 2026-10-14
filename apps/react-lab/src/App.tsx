@@ -1,12 +1,12 @@
 import './App.css'
-import StakeholderPage from './modules/08-lists-rendering/StakeholderPage'
+import ShortlistPage from './modules/09-events-state/ShortlistPage'
 
 
 function App() {
   return (
     <div>
       
-      <StakeholderPage/>
+      <ShortlistPage/>
     </div>
   )
 }
