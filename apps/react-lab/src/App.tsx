@@ -1,12 +1,12 @@
 import './App.css'
-import ShortlistPage from './modules/09-events-state/ShortlistPage'
+import StakeholderForm from './modules/10-forms/StakeholderForm'
 
 
 function App() {
   return (
     <div>
       
-      <ShortlistPage/>
+      <StakeholderForm/>
     </div>
   )
 }
