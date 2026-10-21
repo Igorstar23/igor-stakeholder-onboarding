@@ -174,3 +174,27 @@
   color: red;
   font-weight: bold;
 }
+
+.stakeholder-table {
+  width: 100%;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 17%;
+}
+
+.stakeholder-table table {
+  width: 100%;
+}
+
+.stakeholdereditor, .stakeholder-search-block, .stakeholder-table {
+  padding-top: 2.5%;
+}
+
+.stakeholder-table h2 {
+  color: red;
+  font-weight: bold;
+}
+
+.stakeholdereditor button {
+  margin: 1%;
+}
