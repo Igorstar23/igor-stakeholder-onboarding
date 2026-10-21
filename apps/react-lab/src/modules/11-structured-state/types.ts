@@ -1,6 +1,6 @@
 
 export interface Stakeholder {
-    id:number;
+    id:string;
     name:string;
     role:string;
     organization: string;

@@ -1,12 +1,12 @@
 import './App.css'
-import StakeholderForm from './modules/10-forms/StakeholderForm'
+import StructuredStatePage from './modules/11-structured-state/StructuredStatePage'
 
 
 function App() {
   return (
     <div>
       
-      <StakeholderForm/>
+      <StructuredStatePage/>
     </div>
   )
 }
