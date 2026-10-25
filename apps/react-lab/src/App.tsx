@@ -1,12 +1,12 @@
 import './App.css'
-import StructuredStatePage from './modules/11-structured-state/StructuredStatePage'
+import AsyncStakeholderPage from './modules/12-effects-async/AsyncStakeholderPage'
 
 
 function App() {
   return (
     <div>
       
-      <StructuredStatePage/>
+      <AsyncStakeholderPage/>
     </div>
   )
 }
