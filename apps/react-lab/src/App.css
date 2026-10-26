@@ -198,3 +198,17 @@
 .stakeholdereditor button {
   margin: 1%;
 }
+
+.stakeholders-list {
+  margin-top: 2.5%;
+  float: left;
+  margin-left: 28.5%;
+}
+
+.stakeholders-list-error h2 {
+  margin-top: 2.5%;
+  color: red;
+}
+.stakeholders-block h2 {
+  margin-top: 2.5%;
+}
