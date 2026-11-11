@@ -157,6 +157,7 @@ export default function MiniProjectPage() {
                         {formEnable && (
                             <div>
                                 <StakeholderForm
+                                    key={editingId || 'new'}
                                     onSave={handleSave}
                                     onCancel={handleCancel}
                                     initData={editingStakeholder}
