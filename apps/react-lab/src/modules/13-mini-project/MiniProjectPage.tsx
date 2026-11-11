@@ -46,7 +46,6 @@ export default function MiniProjectPage() {
 
     useEffect(
         () => {
-            StakeholderAPI.failNextRequest();
             void load();
         }, [load]
     );
