@@ -41,7 +41,6 @@ export default function StakeholderForm(
         if (!validate()) { return; }
         
         await onSave(formValue);
-        setFormValue({name:'', email:'', role: '', influence:'', organization:''});
     }
 
     return (

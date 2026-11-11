@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Stakeholder, StakeholderData, Role, Influence } from "./types";
 
 import { StakeholderAPI } from './api/stakeholderApi';
@@ -21,13 +21,16 @@ export default function MiniProjectPage() {
     const [editingId, setEditingId] = useState('');
     const [formEnable, setFormEnable] = useState(false);
     
+    const hasLoaded = useRef(false);
     const load = useCallback(async () => {
-        setStatus('loading');
+
+        if (!hasLoaded.current) setStatus('loading'); 
         setError('');
 
         try {
             let loadData = await StakeholderAPI.list();
             setData(loadData);
+            hasLoaded.current = true;
             setStatus('success');
 
         } catch(err) {
@@ -35,20 +38,22 @@ export default function MiniProjectPage() {
                 err instanceof Error? err.message : 
                 'Real API error!'
             );
-            setStatus('error');
+
+            if (!hasLoaded.current) setStatus('error');
         }
 
     }, []);
 
     useEffect(
         () => {
-           void load();
+            StakeholderAPI.failNextRequest();
+            void load();
         }, [load]
     );
 
     function loadWithError() {
         StakeholderAPI.failNextRequest();
-        load();
+        void load();
     }
 
     async function handleSave(data: StakeholderData): Promise<void> {
@@ -80,6 +85,7 @@ export default function MiniProjectPage() {
                 err instanceof Error? err.message : 
                 'Real API error!'
             );
+            throw err;
         }
     }
 
@@ -137,7 +143,7 @@ export default function MiniProjectPage() {
             {status === 'loading' && <p>Loading stakeholders ...</p>}
             {status === 'error' && (
                     <div>
-                        <h2>Error: {error}</h2>
+                        <h2 className="error">Error: {error}</h2>
                         <button onClick={() => load()}>Retry</button>
                     </div>
                 )
@@ -164,7 +170,13 @@ export default function MiniProjectPage() {
                                 />
                             </div>
                         )}
-                        {error && <h2 className="error">{error}</h2>}
+                        {error && (
+                                <div>
+                                    <h2 className="error">Error: {error}</h2>
+                                    <button onClick={() => load()}>Retry</button>
+                                </div>
+                            )
+                        }
 
                         <Toolbar
                             search={search}
