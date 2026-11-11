@@ -11,9 +11,9 @@ export class StakeholderAPI {
             data: { 
                 name: 'John',
                 email: 'john@gmail.com',
-                role: 'frontend',
+                role: 'frontend' as Role,
                 organization: "Netcracker",
-                influence: 'low'
+                influence: 'low' as Influence
             }
         },
         {
@@ -21,9 +21,9 @@ export class StakeholderAPI {
             data: {
                 name: 'Nico',
                 email: 'nico@gmail.com',
-                role: 'backend',
+                role: 'backend' as Role,
                 organization: "Netcracker",
-                influence: 'medium'
+                influence: 'medium' as Influence
             }
         },
         {
@@ -31,9 +31,9 @@ export class StakeholderAPI {
             data: {
                 name: 'Albert',
                 email: 'albert@gmail.com',
-                role: 'fullstack',
+                role: 'fullstack' as Role,
                 organization: "Netcracker",
-                influence: 'high'
+                influence: 'high' as Influence
             }
         },
         {
@@ -41,9 +41,9 @@ export class StakeholderAPI {
             data: {
                 name: 'Tony',
                 email: 'tony@gmail.com',
-                role: 'frontend',
+                role: 'frontend' as Role,
                 organization: "EPAM",
-                influence: 'low'
+                influence: 'low' as Influence
             }
         },
         {
@@ -51,9 +51,9 @@ export class StakeholderAPI {
             data: {
                 name: 'Ford',
                 email: 'ford@gmail.com',
-                role: 'backend',
+                role: 'backend' as Role,
                 organization: "EPAM",
-                influence: 'medium'
+                influence: 'medium' as Influence
             }
         },
         {
@@ -61,9 +61,9 @@ export class StakeholderAPI {
             data: {
                 name: 'Carl',
                 email: 'carl@gmail.com',
-                role: 'fullstack',
+                role: 'fullstack' as Role,
                 organization: "EPAM",
-                influence: 'high'
+                influence: 'high' as Influence
             }
         }
     ];
