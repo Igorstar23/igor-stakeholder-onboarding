@@ -1,4 +1,4 @@
-import type {Stakeholder, Role, Influence} from "../types";
+import type {Stakeholder, StakeholderData, Role, Influence} from "../types";
 
 export class StakeholderAPI {
     private static isBadRequest = false;
@@ -8,51 +8,63 @@ export class StakeholderAPI {
     private static stakeholders: Stakeholder[] = [
         {
             id: '0',
-            name: 'John',
-            email: 'john@gmail.com',
-            role: 'frontend',
-            organization: "Netcracker",
-            influence: 'low'
+            data: { 
+                name: 'John',
+                email: 'john@gmail.com',
+                role: 'frontend',
+                organization: "Netcracker",
+                influence: 'low'
+            }
         },
         {
             id: '1',
-            name: 'Nico',
-            email: 'nico@gmail.com',
-            role: 'backend',
-            organization: "Netcracker",
-            influence: 'medium'
+            data: {
+                name: 'Nico',
+                email: 'nico@gmail.com',
+                role: 'backend',
+                organization: "Netcracker",
+                influence: 'medium'
+            }
         },
         {
             id: '2',
-            name: 'Albert',
-            email: 'albert@gmail.com',
-            role: 'fullstack',
-            organization: "Netcracker",
-            influence: 'high'
+            data: {
+                name: 'Albert',
+                email: 'albert@gmail.com',
+                role: 'fullstack',
+                organization: "Netcracker",
+                influence: 'high'
+            }
         },
         {
             id: '3',
-            name: 'Tony',
-            email: 'tony@gmail.com',
-            role: 'frontend',
-            organization: "EPAM",
-            influence: 'low'
+            data: {
+                name: 'Tony',
+                email: 'tony@gmail.com',
+                role: 'frontend',
+                organization: "EPAM",
+                influence: 'low'
+            }
         },
         {
             id: '4',
-            name: 'Ford',
-            email: 'ford@gmail.com',
-            role: 'backend',
-            organization: "EPAM",
-            influence: 'medium'
+            data: {
+                name: 'Ford',
+                email: 'ford@gmail.com',
+                role: 'backend',
+                organization: "EPAM",
+                influence: 'medium'
+            }
         },
         {
             id: '5',
-            name: 'Carl',
-            email: 'carl@gmail.com',
-            role: 'fullstack',
-            organization: "EPAM",
-            influence: 'high'
+            data: {
+                name: 'Carl',
+                email: 'carl@gmail.com',
+                role: 'fullstack',
+                organization: "EPAM",
+                influence: 'high'
+            }
         }
     ];
 
@@ -78,23 +90,24 @@ export class StakeholderAPI {
         return [...this.stakeholders];
     }
 
-    static async create(data:Stakeholder): Promise<Stakeholder> {
+    static async create(data:StakeholderData): Promise<Stakeholder> {
         await this.checkBadRequest();
 
-        const newStakeholder: Stakeholder = {...data};
+        const newStakeholder: Stakeholder = {id:'', data: data};
         newStakeholder.id = crypto.randomUUID();
         this.stakeholders = [...this.stakeholders, newStakeholder];
         return newStakeholder;
     }
 
-    static async update(id:string, newData: Stakeholder): Promise<Stakeholder> {
+    static async update(id:string, newData: StakeholderData): Promise<Stakeholder> {
         await this.checkBadRequest();
 
         let index = this.stakeholders.findIndex((stakeholder) => stakeholder.id === id);
 
         if (index === -1) throw new Error(`Error, Stakeholder with id = ${id} isn't exist!`);
-        this.stakeholders = this.stakeholders.map((stakeholder) => (stakeholder.id === id? newData : stakeholder));
-        return newData;
+        let newStakeholder = {id : id, data: newData};
+        this.stakeholders = this.stakeholders.map((stakeholder) => (stakeholder.id === id? newStakeholder : stakeholder));
+        return newStakeholder;
     }
 
     static async remove(id: string) {

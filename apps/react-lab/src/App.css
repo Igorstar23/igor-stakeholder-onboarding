@@ -202,7 +202,7 @@
 .stakeholders-list {
   margin-top: 2.5%;
   float: left;
-  margin-left: 28.5%;
+  margin-left: 37%;
 }
 
 .stakeholders-list-error h2 {
@@ -211,4 +211,8 @@
 }
 .stakeholders-block h2 {
   margin-top: 2.5%;
+}
+
+.stakeholders-block button {
+  margin: 1%;
 }
