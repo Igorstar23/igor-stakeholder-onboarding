@@ -1,12 +1,12 @@
 import './App.css'
-import AsyncStakeholderPage from './modules/12-effects-async/AsyncStakeholderPage'
+import MiniProjectPage from './modules/13-mini-project/MiniProjectPage'
 
 
 function App() {
   return (
     <div>
       
-      <AsyncStakeholderPage/>
+      <MiniProjectPage/>
     </div>
   )
 }
